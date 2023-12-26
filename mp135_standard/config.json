@@ -1,0 +1,27 @@
+{
+    "product_name": "mp135_standard",
+    "device_company": "atk",
+    "device_build_path": "device/board/atk/dlmp135",
+    "target_cpu": "arm",
+    "type": "standard",
+    "version": "3.0",
+    "board": "dlmp135",
+    "api_version": 8,
+    "enable_ramdisk": true,
+    "build_selinux": true,
+    "build_seccomp": true,
+    "inherit": [
+        "productdefine/common/inherit/rich.json"
+    ],
+    "subsystems": [
+        {
+            "subsystem": "security",
+            "components": [
+                {
+                    "component": "selinux",
+                    "features": []
+                }
+            ]
+        }
+    ]
+}
