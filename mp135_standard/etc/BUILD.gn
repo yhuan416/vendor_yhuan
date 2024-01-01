@@ -1,0 +1,22 @@
+import("//build/ohos.gni")
+
+ohos_prebuilt_etc("para_for_chip_prod") {
+    source = "./para/hardware_mp135_standard.para"
+    install_images = [ chip_prod_base_dir ]
+    relative_install_dir = "para"
+    part_name = "product_mp135_standard"
+}
+
+ohos_prebuilt_etc("para_for_sys_prod") {
+    source = "./para/product_mp135_standard.para"
+    install_images = [ sys_prod_base_dir ]
+    relative_install_dir = "para"
+    part_name = "product_mp135_standard"
+}
+
+group("product_etc_conf") {
+    deps = [
+        ":para_for_chip_prod",
+        ":para_for_sys_prod",
+    ]
+}

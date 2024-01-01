@@ -1,0 +1,10 @@
+{
+    "parts": {
+        "product_mp135_standard": {
+            "module_list": [
+                "//vendor/yhuan/mp135_standard/etc:product_etc_conf"
+            ]
+        }
+    },
+    "subsystem": "product_yhuan"
+}

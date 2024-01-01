@@ -8,17 +8,17 @@
     "board": "dlmp135",
     "api_version": 8,
     "enable_ramdisk": true,
-    "build_selinux": true,
+    "build_selinux": false,
     "build_seccomp": true,
     "inherit": [
         "productdefine/common/inherit/rich.json"
     ],
     "subsystems": [
         {
-            "subsystem": "security",
+            "subsystem": "startup",
             "components": [
                 {
-                    "component": "selinux",
+                    "component": "startup_l2",
                     "features": []
                 }
             ]
